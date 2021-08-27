@@ -1,9 +1,13 @@
 @extends('layout.app')
+@push('style')
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+@endpush
 @if (session('success'))
-<div class="alert alert-success alert-dismissble d-flex justify-content-between p-3" role="alert">
-    <p class="m-0">{{ session('success') }}</p>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+    <div class="alert alert-success alert-dismissble d-flex justify-content-between p-3" role="alert">
+        <p class="m-0">{{ session('success') }}</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 @endif
 @section('content')
     <div class="container container-fluid d-flex flex-column gap-4">
@@ -12,14 +16,16 @@
             <div class="card-header">
                 <form class="form-inline d-flex flex-column">
                     <div class="form-group mt-2 mr-2">
-                        <input type="text" class="form-control" name="q" value="{{ $q}}" placeholder="Cari User...">
+                        <input type="text" class="form-control" name="q" value="{{ $q }}"
+                            placeholder="Cari User...">
                     </div>
                     <div class="button-group d-flex gap-2">
                         <div class="form-group mt-2 mr-2">
                             <button class="btn btn-warning"><i class="fas fa-sync"></i>&nbsp;Refresh</button>
                         </div>
                         <div class="form-group mt-2 mr-2">
-                            <a href="{{ route('user.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i>&nbsp;Tambah</a>
+                            <a href="{{ route('user.create') }}" class="btn btn-primary"><i
+                                    class="fas fa-plus"></i>&nbsp;Tambah</a>
                         </div>
                     </div>
                 </form>
@@ -36,29 +42,31 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $no = 1?>
+                        <?php $no = 1; ?>
                         @foreach ($rows as $row)
-                        <tr text-align="center">
-                            <td align="center">{{ $no++ }}</td>
-                            <td>{{ $row->username }}</td>
-                            <td>{{ $row->email }}</td>
-                            <td>{{ $row->position }}</td>
-                            <td align="center">
-                                <a href="{{ route('user.edit', $row) }}" class="btn btn-warning">
-                                    <i class="fas fa-edit"></i>&nbsp;Edit</a>
-                                <form action="{{ route('user.destroy', $row) }}" style="display:inline-block" method="post">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this?')">
-                                        <i class="fas fa-trash"></i>&nbsp;Delete</button>
-                                </form>
-                            </td>
-                        </tr>
+                            <tr text-align="center">
+                                <td align="center">{{ $no++ }}</td>
+                                <td>{{ $row->username }}</td>
+                                <td>{{ $row->email }}</td>
+                                <td>{{ $row->position }}</td>
+                                <td align="center">
+                                    <a href="{{ route('user.edit', $row) }}" class="btn btn-warning">
+                                        <i class="fas fa-edit"></i>&nbsp;Edit</a>
+                                    <form action="{{ route('user.destroy', $row) }}" style="display:inline-block"
+                                        method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-danger"
+                                            onclick="return confirm('Are you sure you want to delete this?')">
+                                            <i class="fas fa-trash"></i>&nbsp;Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
-
             </div>
         </div>
     </div>
+    @include('sweetalert::alert')
 @endsection

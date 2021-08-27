@@ -1,0 +1,59 @@
+body {
+    background-color: #FFFF8D
+}
+
+.active-2 {
+    color: rgb(0, 183, 255) !important;
+    font-weight: 700;
+}
+
+.dark:hover {
+    padding-bottom: 5px !important;
+    border-bottom: 3px solid rgb(0, 183, 255) !important
+}
+
+.breadcrumb>li+li:before {
+    content: "" !important
+}
+
+.breadcrumb {
+    padding: 19px;
+    font-size: 14px;
+    color: #aaa !important;
+    letter-spacing: 2px;
+    border-radius: 5px !important
+}
+
+.fa,
+i {
+    color: rgb(0, 183, 255) !important;
+    font-size: 10px
+}
+
+.fa-angle-double-right {
+    color: #aaa !important
+}
+
+.first {
+    background-color: white !important
+}
+
+li a {
+    text-decoration: none !important;
+    color: #aaa !important
+}
+
+li a:focus,
+li a:active {
+    outline: none !important;
+    box-shadow: none !important
+}
+
+.fa-angle-double-right {
+    font-size: 16px !important
+}
+
+.card {
+    border: none;
+    border-radius: 9px;
+}

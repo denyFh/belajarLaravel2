@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome/css/all.min.css') }}">
+    <script src="{{ asset('js/app.js') }}"></script>
     @stack('style')
 </head>
 
 <body>
-    <div class="continer col-xl-auto col-lg-auto col-md-auto col-sm-auto">
+    <div class="container col-xl-auto col-lg-auto col-md-auto col-sm-auto">
         @yield('content')
     </div>
 
@@ -26,6 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
+    <script src="{{ mix('js/app.js') }}"></script>
     <script src="{{ asset('vendor/fontawesome/js/all.js') }}"></script>
 </body>
 

@@ -14,12 +14,14 @@
     "laravel-mix": "^6.0.6",
     "lodash": "^4.17.19",
     "postcss": "^8.1.14",
+    "sweetalert": "^2.1.2",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@fortawesome/fontawesome-free-solid": "^5.0.13"
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "jquery": "^3.6.0"
   },
   "name": "belajarlaravel2",
   "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\"></a></p>",
