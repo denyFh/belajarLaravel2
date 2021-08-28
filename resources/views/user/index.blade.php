@@ -3,12 +3,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 @endpush
-@if (session('success'))
+{{-- @if (session('success'))
     <div class="alert alert-success alert-dismissble d-flex justify-content-between p-3" role="alert">
         <p class="m-0">{{ session('success') }}</p>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-@endif
+@endif --}}
 @section('content')
     <div class="container container-fluid d-flex flex-column gap-4">
         <h1 class="text-center mt-4">{{ $title }}</h1>
